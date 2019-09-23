@@ -1,0 +1,13 @@
+
+
+// npm install korte : npm init -y [package.json file create hobe]
+
+// es-6 er codeguloke es-5 e convert korte babel use korbo, babel install korte:
+	npm install --save-dev babel-core babel-preset-env [install hoye gele .babelrc namee file 	create korbo... then tar vitore obj create korbo : {"preset":["babel-preset-env"]}]
+
+// ekhon webpack install korbo : npm install --save-dev webpack babel-loader
+	& npm install --save-dev webpack-cli -D [install hoye gele webpack.config.js namee file create 	korbo...]
+
+// ekhn config file e entry korte hobe: [const ocnfig = {entry: './src/index.js',}] then output file 	create korbo...
+
+// package.json er vitore script ta out kore diye dev mode & bbuild mode create korte hobe...
