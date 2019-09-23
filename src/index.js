@@ -1,4 +1,5 @@
 
+
 // const a = 10;
 // const b = 20;
 
@@ -52,27 +53,91 @@
 
 
 
-function demo(){
-    {
-        let x = 20; 
-        {
-            const x = 15;
-            console.log(x);
+// function demo(){
+//     {
+//         let x = 20; 
+//         {
+//             const x = 15;
+//             console.log(x);
 
-           // x = 18; // its not valid 
+//            // x = 18; // its not valid 
             
+//         }
+
+//         x = 19; // its valid [becose let hochche block lebel variable declearation er jonno bebohar kora hoy...]
+//         console.log(x);
+        
+//     }
+
+//     // console.log(x); // undefined
+    
+// }
+
+// demo();
+
+
+
+
+        // template string
+
+    const name = 'Mahib'
+    const age = 32
+    const email = 'mahibuddin@gmail.com'
+
+    // const details = 'Name: ' + name + 'Age: ' + age + 'Email: ' + email
+
+    const details =`Name = ${name}, Age = ${age}, Email = ${email}`
+
+    console.log(details);
+    
+
+// alert('Webpack is Awesome...');
+
+
+
+            // Arrow function
+
+    // const print = name => {
+    //     console.log('Hello ', name); 
+    // }
+
+    // print('Mahib');
+
+
+
+    const addMe = (a,b) => a+b;
+    console.log(addMe(10,5));
+    
+
+    const sqr = x => x*x;
+    console.log(sqr(12));
+    
+
+    // normal function declaration
+
+//  const obj  = {
+//      name: 'Mahib Uddin',
+//      print: function(){
+//          setTimeout(function(){
+//              console.log(this);
+//          }.bind(this), 1000);
+//      }
+//  }
+
+//  obj.print();
+
+
+    // Arrow function declaration
+
+         const obj  = {
+            name: 'Mahib Uddin',
+            print: function(){
+                setTimeout(() => {
+                    console.log(this.name);   
+                }, 1000);
+            }
         }
 
-        x = 19; // its valid [becose let hochche block lebel variable declearation er jonno bebohar kora hoy...]
-        console.log(x);
-        
-    }
-}
-
-demo();
-
-
-
-
+        obj.print();
 
 
