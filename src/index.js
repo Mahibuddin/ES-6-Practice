@@ -1,5 +1,6 @@
 
 
+
 // const a = 10;
 // const b = 20;
 
@@ -106,7 +107,10 @@
 
 
     const addMe = (a,b) => a+b;
-    console.log(addMe(10,5));
+    setTimeout(() => {
+        console.log(addMe(10, 5));
+           
+    }, 2000);;
     
 
     const sqr = x => x*x;
@@ -141,3 +145,81 @@
         obj.print();
 
 
+
+        // Enhance Object
+
+        let nam = "Mahib";
+
+        let mail = "mahib.gmail.com";
+
+        const Cat = {
+            nam,
+            mail,
+
+            print(){
+                console.log(this.nam, this.mail);
+                
+            }
+        }
+        
+        Cat.print();
+
+        console.dir(Cat);
+
+
+        // Destructure Object
+
+        const book = {
+            bookname: 'himu',
+            author: 'humayun'
+        }
+
+        let {bookname, author} = book;
+        console.log(bookname, author);
+
+
+        function print ({bookname, author}){
+            console.log(`Hello ${bookname}; Author ${author}`);
+            
+        }
+
+        print({author, bookname});  // order doesn't metter becose of {object...}
+        
+
+
+
+
+        // Default parameter
+
+        // let add = (a, b) => a+b;
+        // console.log(add(10));
+
+        let sqd = (a=5, b=a) => a*b;  // set as default value
+        console.log(sqd());
+        console.log(sqd(10));
+
+
+        // Rest Operator
+
+        function sum (...num){
+            return num.reduce((a,b) => a+b);  
+        }
+        let xum = sum(12, 14, 30, 64, 63, 50, 40);
+        console.log(xum);
+        
+        // er kaj holo array te rupantor kora...
+        
+        
+        // Spread Operator
+
+        let arr = [1, 2, 3, 4, 5]
+
+            arr = [...arr, 233, 509, 230, 340]
+
+        console.log(arr);
+        console.log(...arr);
+        
+        // prottek ta array or object ke venge fele...
+
+
+        
