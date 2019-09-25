@@ -1,3 +1,5 @@
+import add  from './math';
+console.log(add);
 
 
 
@@ -209,17 +211,38 @@
         
         // er kaj holo array te rupantor kora...
         
-        
+        console.clear();
         // Spread Operator
 
         let arr = [1, 2, 3, 4, 5]
 
             arr = [...arr, 233, 509, 230, 340]
 
-        console.log(arr);
-        console.log(...arr);
+        console.dir(arr);
+        console.dir(...arr);
         
         // prottek ta array or object ke venge fele...
+
+   
+
+        var college = {
+            n: 'Afiluddin Degree College',
+            add: 'Bagachra'
+        }
+
+        var university = {
+            ...college,
+            n: 'Bagachra United High school',
+            years: 2000
+        }
+
+        console.table(university);
+
+        console.clear();
+
+        
+        
+        
 
 
         
