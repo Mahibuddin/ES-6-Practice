@@ -1,5 +1,10 @@
-import add  from './math';
-console.log(add);
+ import {add} from './math.js';
+ import Student from './student.js';
+
+
+
+
+
 
 
 
@@ -238,7 +243,64 @@ console.log(add);
 
         console.table(university);
 
-        console.clear();
+
+
+
+console.log(add(12, 15));
+
+let st1 = new Student('sohel', 'sohel@gmail.com', '1660');
+
+st1.welcome();
+
+
+
+            // promise
+
+
+    let myFirstPromise = new Promise((resolve, reject) => {
+        let name = 'Mahib Uddin Ahmed';
+
+       setTimeout(() => resolve(name), 2000);
+    })
+
+    console.log(myFirstPromise);
+
+
+    myFirstPromise
+        .then((name) =>{  // callback
+            console.log('I am ' + name);
+            
+        })
+        // .catch((err) =>{  // reject call kori nai, tai .catch() blocker dorkar nai...
+
+        // })
+    
+
+fetch('https://jsonplaceholder.typicode.com/users')
+
+        .then((response) => response.json())
+        .then((body) => {const lis = body.map(data => {
+            let li = document.createElement('li');
+            let text = `Name: ${data.name}, Email: ${data.email}`;
+            let textNode = document.createTextNode(text);
+
+            li.appendChild(textNode);
+            return li;
+
+            });
+
+            lis.forEach((li) => {
+                document.getElementById('mylist').appendChild(li);
+            });
+            
+        })
+
+        .catch((err) => console.log(err))
+
+
+
+
+
 
         
         
